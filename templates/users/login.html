@@ -31,6 +31,11 @@
         transform: scale(.85) translateY(-.5rem) translateX(.15rem);
     }
 
+    /* Prevent Bootstrap from slapping a white background behind the floating text label */
+    .form-floating > label::after {
+        background-color: transparent !important;
+    }
+
     /* AutoFill reset for Chrome so it doesn't break glassmorphism */
     input:-webkit-autofill,
     input:-webkit-autofill:hover, 
@@ -146,7 +151,7 @@
 
         <div class="mt-4 text-center">
             <span class="text-muted small">Don't have an account? </span>
-            <a href="{% url 'register' %}" class="fw-semibold small">Create one</a>
+            <a href="{% url 'register' %}" class="fw-semibold small">Create account</a>
         </div>
     </div>
 </div>
